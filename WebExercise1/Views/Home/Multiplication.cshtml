@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Multiplication";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2 style="text-align:center;">Multiplication Table</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> </th>
+            @for (int i = 1; i <= 10; i++)
+            {
+                <th>@i</th>
+            }
+        </tr>
+        
+    </thead>
+    
+   
+    <tbody>
+        @for (int i = 1; i <= 10; i++)
+        {
+            <tr>
+                
+                <th>@i</th>
+                @for (int j = 1; j <= 10; j++)
+                {
+                    <td>@(i * j)</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
